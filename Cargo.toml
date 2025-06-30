@@ -1,0 +1,10 @@
+[package]
+name = "salmonware-crabby"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+clap = "4.5.40"
+crossterm = "0.29.0"
+ratatui = "0.29.0"
+ropey = "1.6.1"
