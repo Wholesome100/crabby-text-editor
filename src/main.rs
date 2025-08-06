@@ -1,3 +1,10 @@
+// bring additional files into scope up here
+mod cli;
+mod textedit;
+
+// import file level functions like so
+use cli::hello;
+
 use std::fs::File;
 use std::io::{BufReader, BufWriter};
 use ropey::Rope;
@@ -5,6 +12,7 @@ use ropey::Rope;
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     // Welcome to Crabby!
     // This is a basic text editor using clap, ropey, ratatui and crossterm
+    println!("{}", hello());
    let mut text = Rope::from_reader(
     BufReader::new(File::open("src/store/dummy.txt")?)
    )?;
